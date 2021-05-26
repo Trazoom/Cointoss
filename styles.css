@@ -1,15 +1,19 @@
+* {
+  text-align: center;
+}
+
 #container {
     height: 300px;
-    width: 56px;
+    width: 100px;
     margin: 0 auto 50px;
     position: relative;
 }
 #img-container {
-    height: 56px;
-    width: 56px;
+    height: 100px;
+    width: 100px;
     position: absolute;
     bottom: 0;    
-    background-image: url(./img/coin_1.png);
+    background-image: url(./img/coin_blank.png);
     background-repeat: no-repeat;
     background-position: center;
     /*transition: background-image 1s;
@@ -18,7 +22,7 @@
 
 .spin {
     animation-name: cointoss;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-timing-function: linear;
 }
 
@@ -36,6 +40,7 @@ button {
   }*/
 
   @keyframes cointoss {
-    50%  {background-image: url(./img/coin_1.png); bottom: 200px; transform: rotate(360deg);}
-    100%  {background-image: url(./img/coin_1.png); bottom: 0px; transform: rotate(720deg);}
+    /*0%  {background-image: url(./img/coin_spin.png); bottom: 0px; transform: rotate(0deg);}*/
+    50%  {background-image: url(./img/coin_spin.png); bottom: 200px; transform: rotate(360deg);}
+    100%  {background-image: url(./img/coin_spin.png); bottom: 0px; transform: rotate(720deg);}
   }
